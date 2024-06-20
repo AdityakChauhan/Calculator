@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <main>
+        <div id="maindiv">
+            <input type="text" id="shownum" readonly/>
+            <button onclick="str=''; document.querySelector('#shownum').value=str;">C</button>
+            <button onclick="str+=' / '; document.querySelector('#shownum').value=str;">/</button>
+            <button onclick="str+=' * '; document.querySelector('#shownum').value=str;">*</button>
+            <button onclick="str+=' - '; document.querySelector('#shownum').value=str;">-</button>
+            <button onclick="str+='7'; document.querySelector('#shownum').value=str;">7</button>
+            <button onclick="str+='8'; document.querySelector('#shownum').value=str;">8</button>
+            <button onclick="str+='9'; document.querySelector('#shownum').value=str;">9</button>
+            <button onclick="str+=' + '; document.querySelector('#shownum').value=str;" id="plus">+</button>
+            <button onclick="str+='4'; document.querySelector('#shownum').value=str;">4</button>
+            <button onclick="str+='5'; document.querySelector('#shownum').value=str;">5</button>
+            <button onclick="str+='6'; document.querySelector('#shownum').value=str;">6</button>
+            <button onclick="str+='1'; document.querySelector('#shownum').value=str;">1</button>
+            <button onclick="str+='2'; document.querySelector('#shownum').value=str;">2</button>
+            <button onclick="str+='3'; document.querySelector('#shownum').value=str;">3</button>
+            <button onclick="str=eval(str); document.querySelector('#shownum').value=str;" id="equals">=</button>
+            <button onclick="str+='0'; document.querySelector('#shownum').value=str;" id="zero" onclick="">0</button>
+            <button onclick="str+='.'; document.querySelector('#shownum').value=str;">.</button>
+        </div>
+    </main>
+    <script>
+        let str="";
+        document.querySelector("#shownum").value=str;
+    </script>
+</body>
+</html>
